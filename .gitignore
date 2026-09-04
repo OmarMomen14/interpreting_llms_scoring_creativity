@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.DS_Store
+.env
+.venv/
+# Usually keep large/local inputs out of Git; add selectively if licensing permits.
+data/input/*.pt
+data/input/**/*.bin
+data/input/*.db

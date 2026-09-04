@@ -1,0 +1,9 @@
+numpy>=1.26
+pandas>=2.0
+scipy>=1.11
+scikit-learn>=1.4
+torch>=2.1
+transformers>=4.40
+tqdm>=4.66
+optuna>=3.5
+openai>=1.0

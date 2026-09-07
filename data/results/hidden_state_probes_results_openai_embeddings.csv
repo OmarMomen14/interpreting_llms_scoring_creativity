@@ -1,0 +1,2 @@
+Best_Alpha,Test_r,Test_CI_lower,Test_CI_upper,Test_p,Test_removed,Heldout_r,Heldout_CI_lower,Heldout_CI_upper,Heldout_p,Heldout_removed,Validation_r,Validation_CI_lower,Validation_CI_upper,Validation_p,Validation_removed
+0.6061898993497572,0.71759288213579,0.6813427979608118,0.7503315503732282,0.0,2,0.6157512451038514,0.5695451662579561,0.6580779479039061,0.0,0,0.7389451884000096,0.6898176471642922,0.7812988077568834,0.0,0

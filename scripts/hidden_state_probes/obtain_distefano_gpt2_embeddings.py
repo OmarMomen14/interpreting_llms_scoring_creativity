@@ -66,8 +66,8 @@ def get_average_embeddings(metaphors):
     return torch.stack([torch.stack(layer_list) for layer_list in all_layers_embeds])
 
 
-# for every text in a list of metaphors get the average embedding of the metaphor for each gpt2 layer (including initial embeddings)
-def get_first_token_embeddings(metaphors):
+# for every text in a list of metaphors get the embedding of the last token of the metaphor for each gpt2 layer (including initial embeddings)
+def get_last_token_embeddings(metaphors):
     model.eval()
     all_layers_embeds = [[] for _ in range(model.config.num_hidden_layers + 1)]
 
@@ -133,7 +133,7 @@ for split in train_val_test_dataset:
         train_val_test_dataset[split][:]["response"], tokenizer, model
     )
     mean = get_average_embeddings(train_val_test_dataset[split][:]["response"])
-    cls = get_first_token_embeddings(train_val_test_dataset[split][:]["response"])
+    cls = get_last_token_embeddings(train_val_test_dataset[split][:]["response"])
 
     mean_std_tensor[split] = {"embeddings": mean_std, "ratings": ratings}
     mean_tensor[split] = {"embeddings": mean, "ratings": ratings}
